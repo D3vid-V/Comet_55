@@ -1,1 +1,69 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\usepackage[ngerman]{babel}
 
+\title{Abgabe 1 für Computergestützte Methoden}
+\author{Gruppe (55), (David Vogelsang, Lennart Gohla, Marvin Buhrmeister)}
+\date{(Abgabedatum)}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents 
+\renewcommand{\contentsname}{Inhaltsverzeichnis}
+\newpage
+
+\section{Der zentrale Grenzwertsatz}
+
+Der zentrale Grenzwertsatz (ZGS) ist ein fundamentales Resultat der Wahrscheinlichkeits\-theorie, das die Verteilung von Summen unabhängiger, identisch verteilter (i.i.d.) Zufallsvariablen (ZV) beschreibt. Er besagt, dass unter bestimmten Voraussetzungen die Summe einer großen Anzahl solcher ZV annähernd normalverteilt ist, unabhängig von der Verteilung der einzelnen ZV. Dies ist besonders nützlich, da die Normalverteilung gut untersucht und mathematisch handhabbar ist.
+
+\subsection{Aussage}
+
+Sei $X_1, X_2, \dots, X_n$ eine Folge von i.i.d. ZV mit dem Erwartungswert $\mu = E(X_i)$ und der Varianz $\sigma^2 = \operatorname{Var}(X_i)$, wobei $0 < \sigma^2 < \infty$ gelte. Dann konvergiert die standardisierte Summe $Z_n$ dieser ZV für $n \to \infty$ in Verteilung gegen eine Standardnormalverteilung:\footnote{Der zentrale Grenzwertsatz hat verschiedene Verallgemeinerungen. Eine davon ist der
+\textbf{Lindeberg-Feller-Zentrale-Grenzwertsatz} [\cite{Klenke2013}, Seite 328], der schwächere Bedingungen an
+die Unabhängigkeit und die identische Verteilung der ZV stellt.}
+\[
+Z_n = \frac{\sum_{i=1}^n X_i - n \mu}{\sigma \sqrt{n}} \xrightarrow{d} N (0, 1).
+\]
+Das bedeutet, dass für große $n$ die Summe der ZV näherungsweise normalverteilt ist mit Erwartungswert $n \mu$ und Varianz $n \sigma^2$:
+\[
+\sum_{i=1}^n X_i \sim N (n \mu, n \sigma^2).
+\]
+
+\subsection{Erklärung der Standardisierung}
+
+Um die Summe der ZV in eine Standardnormalverteilung zu transformieren, subtrahiert man den Erwartungswert $n \mu$ und teilt durch die Standardabweichung $\sigma \sqrt{n}$. Dies führt zu der obigen Formel (1). Die Darstellung (2) ist für $n \to \infty$ nicht wohldefiniert.
+
+\subsection{Anwendungen}
+
+Der ZGS wird in vielen Bereichen der Statistik und der Wahrscheinlichkeits\-theorie angewendet. Typische Beispiele sind:
+\begin{itemize}
+    \item \textbf{Finanzanalysen:} Bei der Analyse von Renditen von Finanzinstrumenten, wo die Renditen als Summe von vielen kleinen, unabhängigen Einflüssen betrachtet werden können. Der ZGS ermöglicht die Annahme einer Normalverteilung der Renditen für Risiko- und Portfoliobewertungen.
+    \item \textbf{Umfragen und Meinungsforschung:} Bei der Auswertung von Umfrageergebnissen wird häufig eine große Anzahl von Antworten aggregiert. Der ZGS hilft dabei, die Verteilung der Durchschnittswerte der Antworten zu normalisieren, was die Analyse erleichtert.
+\end{itemize}
+
+
+
+
+\newpage
+\section{Bearbeitung zur Aufgabe 1}
+
+(ergänzen Sie hier Ihre Lösung zur Aufgabe 1)
+
+\newpage
+
+\begin{thebibliography}{9}
+    \label{Literatur}
+    \bibitem{Klenke2013} Achim Klenke. 
+    \textit{Wahrscheinlichkeitstheorie}. Springer, 3. edition, 2013.
+\end{thebibliography}
+
+%\section{Code}
+% \begin{verbatin}
+     %Code aus SQL
+ %\end{verbatin}
+
+\end{document}
